@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .title {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .author {
+        font-size: 8px;
+        text-align: right;
+        font-weight: bold;
+      }
+
+      .version {
+        font-size: 8px;
+        text-align: right;
+        margin-bottom: 6px;
+      }
+
+      .start-button {
+        background-color: #59daa4;
+        border: none;
+        width: 65px;
+        height: 22px;
+        margin-top: 8px;
+        width: bold;
+        cursor: pointer;
+      }
+
+      .start-button:active {
+        opacity: 0.5;
+      }
+
+      .start-button:disabled {
+        background-color: #ccc;
+        cursor: auto;
+      }
+    </style>
+    <script src="./popup.js"></script>
+  </head>
+  <body>
+    <h1 class="title">Facebook post collector</h1>
+    <form class="form">
+      <input
+        class="input input_date"
+        type="date"
+        placeholder="Дата"
+        min="1970-01-01"
+        min="3000-01-01"
+      />
+      <input
+        class="input input_time"
+        type="time"
+        placeholder="Время"
+        value="00:00"
+      />
+      <button class="start-button" disabled>Get</button>
+    </form>
+    <p class="version">version 1.0.0</p>
+    <p class="author">Anton Voitenko</p>
+  </body>
+</html>

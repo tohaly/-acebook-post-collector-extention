@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <p class="post-list__message hidden"></p>
+    <div class="post-list"></div>
+    <template id="template">
+      <a href="#" class="post__link" target="_blanck">
+        <div class="post">
+          <div class="group">
+            <img src="" alt="group_img" class="group_img" />
+            <h2 class="group_title"></h2>
+          </div>
+          <header class="post__header">
+            <img src="" alt="user-img" class="post__user-img" />
+            <div class="post__column">
+              <h2 class="post__user-name"></h2>
+              <time class="post__time"></time>
+            </div>
+          </header>
+          <p class="post__text"></p>
+          <img class="post__img" src="" alt="post-img" />
+          <div class="post__like-container">
+            <img
+              src="https://seeklogo.com/images/F/facebook-like-logo-32FAB6926D-seeklogo.com.png"
+              alt=""
+              class="post__like-icon"
+            />
+            <p class="post__like-counter"></p>
+          </div>
+        </div>
+      </a>
+    </template>
+    <script src="./index.js"></script>
+  </body>
+</html>
