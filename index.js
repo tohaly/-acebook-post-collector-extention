@@ -70,6 +70,8 @@ window.onload = () => {
       sortPosts(collectedData).forEach((element) => {
         setPost(element);
       });
+
+      document.querySelector(".loader").classList.add("hidden");
     }
   });
 

@@ -1,13 +1,11 @@
 const startScrubGroupList = () => {
   let firstScroll = 10000;
-  let shoMoreIndicator = document.querySelector(SHOW_MORE);
 
   const getLinksOnGroup = () => {
-    const nodeList = document.querySelector(GROUP_LIST).children;
+    console.log("here");
     const groupLinks = [];
-
+    const nodeList = document.querySelector(GROUP_LIST).children;
     [...nodeList].forEach((node) => {
-      console.log(node.querySelector(ACTIVE_NOTIFICATION));
       if (node.querySelector(ACTIVE_NOTIFICATION)) {
         const link = node.querySelector(GROUP_LINK).getAttribute("href");
         const regex = /\/\d*\//;
@@ -34,16 +32,23 @@ const startScrubGroupList = () => {
   };
 
   const showMoreGroups = () => {
-    if (shoMoreIndicator) {
-      window.scroll(0, firstScroll);
+    const groupListContainer = document.querySelector(GROUP_LIST);
+    const shoMoreIndicator = document.querySelector(SHOW_MORE);
+    const loader = document.querySelector(LOADER);
+    console.log(groupListContainer);
 
+    if (shoMoreIndicator || loader) {
+      window.scroll(0, firstScroll);
       firstScroll += 10000;
-      shoMoreIndicator = document.querySelector(SHOW_MORE);
       setTimeout(() => {
         showMoreGroups();
       }, 1000);
-    } else {
+    } else if (groupListContainer) {
       getLinksOnGroup();
+    } else {
+      setTimeout(() => {
+        showMoreGroups();
+      }, 1000);
     }
   };
 

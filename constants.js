@@ -21,3 +21,4 @@ const GROUP_LIST = "._2pip";
 const GROUP_LINK = "._7hkg";
 const ACTIVE_NOTIFICATION = "._7ymc";
 const SHOW_MORE = "._lmw";
+const LOADER = "._7iai";

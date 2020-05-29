@@ -1,3 +1,9 @@
+@keyframes spin-loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -106,6 +112,29 @@ a {
 .post__like-counter {
   margin: 0;
   font-weight: bold;
+}
+
+.loader {
+  display: flex;
+  padding: 200px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loader__item {
+  display: block;
+  width: 74px;
+  height: 74px;
+  border: 4px solid #444;
+  border-bottom-color: #888;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  animation: spin-loader 0.75s infinite linear;
+}
+
+.loader__text {
+  font-size: 30px;
+  margin: 0;
 }
 
 .hidden {
